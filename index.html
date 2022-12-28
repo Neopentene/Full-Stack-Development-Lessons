@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="styles/theme.css">
+
+    <link rel="preload" as="font" type="font/ttf" href="fonts/FiraCode.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="fonts/Simplifica.ttf" crossorigin>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+
+    <title>Lesson Material</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            background: var(--jet);
+        }
+
+        header {
+            text-align: center;
+        }
+
+        header>h1 {
+            padding: 4rem 2rem 0.5rem;
+            color: var(--maize-crayola);
+            text-shadow: 4px 4px 2px var(--tickle-me-pink);
+            font-family: Simplifica;
+            font-size: 8rem;
+            font-weight: 100;
+        }
+
+        header>h4 {
+            padding: 0 2rem 4rem;
+            color: var(--lavender-blush);
+            font-family: Fira Code;
+            font-size: 1rem;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            max-height: 50vh;
+            max-width: 70%;
+            border-radius: 1rem;
+            box-shadow: 0 0 0 3px var(--st-patricks-blue);
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .card::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .card::-webkit-scrollbar-track-piece:start,
+        .card::-webkit-scrollbar-track-piece:end {
+            margin: 1.5rem;
+        }
+
+        .card::-webkit-scrollbar-track,
+        .card::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+
+        .card:hover::-webkit-scrollbar-thumb {
+            background-color: var(--davys-grey);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 1rem 2rem;
+            text-align: center;
+            color: var(--cornflower-blue);
+            font-family: Fira Code;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        li:hover {
+            background-color: var(--cornflower-blue);
+            color: var(--jet);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lesson Material</h1>
+        <h4>Full Stack Development</h4>
+    </header>
+    <main>
+        <div class="card">
+            <ul id="lessons">
+                <li data-route="structure_of_html">Structure of HTML</li>
+                <li data-route="basic_tags">Basic HTML Tags</li>
+                <li data-route="form_input_element">Form Element and Inputs</li>
+                <li data-route="table_element">Tables in HTML</li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        document.querySelectorAll('#lessons > li').forEach(lesson => {
+            lesson.addEventListener("click", () => {
+                let route = "./lessons/" + lesson.getAttribute("data-route") + ".html";
+                window.open(route);
+            })
+        })
+    </script>
+</body>
+
+</html>

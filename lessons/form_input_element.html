@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="../styles/theme.css">
+    <link rel="stylesheet" href="../styles/code.css">
+
+    <link rel="preload" as="font" type="font/ttf" href="../fonts/FiraCode.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="../fonts/Simplifica.ttf" crossorigin>
+
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../manifest.json">
+
+    <title>Form Element</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            background: var(--jet);
+        }
+
+        .nostyle {
+            display: flex;
+            padding: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nostyle>div {
+            padding: 2rem;
+            border-radius: 1rem;
+            background: white;
+        }
+
+        .notification {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            padding: 1rem;
+            border-radius: 1rem;
+            transform: translateX(-50%);
+            background: var(--st-patricks-blue);
+            color: var(--lavender-blush);
+            font-family: Fira Code;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nostyle">
+        <div>
+            <form action="/">
+                <label for="username">Username</label><br>
+                <input type="text" name="username" id="username"><br>
+
+                <label for="password">Password</label><br>
+                <input type="password" name="password" id="password"><br>
+
+                <input type="radio" name="role" id="admin" value="admin">
+                <label for="admin">Admin</label>
+                <input type="radio" name="role" id="client" value="client">
+                <label for="client">Client</label>
+
+                <br>
+
+                <input type="checkbox" name="agreement" id="agreement">
+                <label for="agreement">I Agree</label><br>
+
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+
+
+    <div class="code">
+        <pre>
+            <code id="form-code">
+&lt;form action="/"&gt;
+    &lt;label for="username"&gt;Username&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" name="username" id="username"&gt;&lt;br&gt;
+
+    &lt;label for="password"&gt;Password&lt;/label&gt;&lt;br&gt;
+    &lt;input type="password" name="password" id="password"&gt;&lt;br&gt;
+
+    &lt;input type="radio" name="role" id="admin" value="admin"&gt;
+    &lt;label for="admin"&gt;Admin&lt;/label&gt;
+    &lt;input type="radio" name="role" id="client" value="client"&gt;
+    &lt;label for="client"&gt;Client&lt;/label&gt;
+
+    &lt;br&gt;
+
+    &lt;input type="checkbox" name="agreement" id="agreement"&gt;
+    &lt;label for="agreement"&gt;I Agree&lt;/label&gt;&lt;br&gt;
+
+    &lt;input type="submit"&gt;
+&lt;/form&gt;
+            </code>
+            <div class="copy" data-for="form-code" data-message="Copied Form Element!"></div>
+        </pre>
+    </div>
+    <script>
+        hljs.highlightElement(document.getElementById("form-code"));
+
+        function generateNotification(text = "", id = "") {
+            let div = document.createElement("div");
+            div.id = id + "-notification";
+            div.textContent = text;
+            div.classList.add("notification");
+
+            return div
+        }
+
+        document.querySelectorAll(".copy").forEach(el => {
+            el.addEventListener("click", () => {
+                let id = el.getAttribute("data-for");
+                let range = document.createRange();
+                let code = document.getElementById(el.getAttribute("data-for"));
+
+                range.selectNodeContents(code);
+
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+
+                let notification = generateNotification(el.getAttribute("data-message"), id);
+
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    document.body.removeChild(
+                        document.getElementById(id + "-notification")
+                    );
+                }, 1000);
+
+                document.execCommand("copy");
+
+                window.getSelection().removeAllRanges();
+            })
+        })
+    </script>
+</body>
+
+</html>

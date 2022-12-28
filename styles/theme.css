@@ -1,0 +1,40 @@
+/* 
+        ---- Theme Colors ----
+        => HEX
+        Davys Grey: #515052ff;
+        Jet: #333138ff;
+        St Patricks Blue: #1d2f6fff;
+        Cornflower Blue: #8390faff;
+        Maize Crayola: #fac748ff;
+        Lavender Blush: #f9e9ecff;
+        Tickle Me Pink: #f88dadff;
+
+        => HSL
+        Davys Grey: hsla(270, 1%, 32%, 1);
+        Jet: hsla(257, 7%, 21%, 1);
+        St Patricks Blue: hsla(227, 59%, 27%, 1);
+        Cornflower Blue: hsla(233, 92%, 75%, 1);
+        Maize Crayola: hsla(43, 95%, 63%, 1);
+        Lavender Blush: hsla(349, 57%, 95%, 1);
+        Tickle Me Pink: hsla(342, 88%, 76%, 1);
+        */
+
+@font-face {
+  font-family: Simplifica;
+  src: url("/fonts/Simplifica.ttf");
+}
+
+@font-face {
+  font-family: Fira Code;
+  src: url("/fonts/FiraCode.ttf");
+}
+
+:root {
+  --davys-grey: #515052ff;
+  --jet: #333138ff;
+  --st-patricks-blue: #1d2f6fff;
+  --cornflower-blue: #8390faff;
+  --maize-crayola: #fac748ff;
+  --lavender-blush: #f9e9ecff;
+  --tickle-me-pink: #f88dadff;
+}

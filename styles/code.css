@@ -1,0 +1,31 @@
+.code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.code pre {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: min-content;
+}
+
+.code pre > code {
+  border-radius: 1rem;
+}
+
+.code pre > div.copy {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  top: 10%;
+  right: 5%;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuklEQVR4nN2UsQ2DMBBFX52CCaBmCGAK0ngHFksa5mCXCCWkoHRkyWkcbPlORAr50q8s/2ed/A/+TSegBc6AididdUChCe8TwSZw7+9kqxWEG+9GAkiNxSTGlS2j9DEAAzABK2AjXoARqKWAAXgmgkPPQCUBTILwt68SwKoAPCTf1Cr9oe7bgCKyKuxeAPxuaYJx2T0BW7KHByyK8LsEMCoAFwmg9vXPDb8BJUJVvv6uoan2upeLw39bL8nQ4F3mbEqCAAAAAElFTkSuQmCC")
+    no-repeat center;
+  border-radius: 4px;
+}
+
+.code pre > div.copy:hover {
+  box-shadow: 0 0 0 2px black;
+}
