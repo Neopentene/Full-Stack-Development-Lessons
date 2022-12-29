@@ -9,6 +9,27 @@
   margin: 0;
   padding: 0;
   width: min-content;
+  max-width: 80%;
+  overflow: auto;
+}
+
+.code pre::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.code pre::-webkit-scrollbar-track-piece:start,
+.code pre::-webkit-scrollbar-track-piece:end {
+  margin: 1.5rem;
+}
+
+.code pre::-webkit-scrollbar-track,
+.code pre::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.code pre:hover::-webkit-scrollbar-thumb {
+  background-color: var(--davys-grey);
 }
 
 .code pre > code {

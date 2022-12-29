@@ -33,6 +33,14 @@
             background: var(--jet);
         }
 
+
+        header>h2 {
+            padding: 2rem;
+            color: var(--lavender-blush);
+            font-family: FiraCode;
+            text-align: center;
+        }
+
         .nostyle {
             display: flex;
             padding: 1rem;
@@ -61,34 +69,42 @@
 </head>
 
 <body>
-    <div class="nostyle">
-        <div>
-            <form action="/">
-                <label for="username">Username</label><br>
-                <input type="text" name="username" id="username"><br>
 
-                <label for="password">Password</label><br>
-                <input type="password" name="password" id="password"><br>
+    <header>
+        <h2>
+            Form Element and Few Input Types
+        </h2>
+    </header>
 
-                <input type="radio" name="role" id="admin" value="admin">
-                <label for="admin">Admin</label>
-                <input type="radio" name="role" id="client" value="client">
-                <label for="client">Client</label>
+    <main>
+        <div class="nostyle">
+            <div>
+                <form action="/">
+                    <label for="username">Username</label><br>
+                    <input type="text" name="username" id="username"><br>
 
-                <br>
+                    <label for="password">Password</label><br>
+                    <input type="password" name="password" id="password"><br>
 
-                <input type="checkbox" name="agreement" id="agreement">
-                <label for="agreement">I Agree</label><br>
+                    <input type="radio" name="role" id="admin" value="admin">
+                    <label for="admin">Admin</label>
+                    <input type="radio" name="role" id="client" value="client">
+                    <label for="client">Client</label>
 
-                <input type="submit">
-            </form>
+                    <br>
+
+                    <input type="checkbox" name="agreement" id="agreement">
+                    <label for="agreement">I Agree</label><br>
+
+                    <input type="submit">
+                </form>
+            </div>
         </div>
-    </div>
 
 
-    <div class="code">
-        <pre>
-            <code id="form-code">
+        <div class="code">
+            <pre>
+                <code id="form-code">
 &lt;form action="/"&gt;
     &lt;label for="username"&gt;Username&lt;/label&gt;&lt;br&gt;
     &lt;input type="text" name="username" id="username"&gt;&lt;br&gt;
@@ -108,10 +124,13 @@
 
     &lt;input type="submit"&gt;
 &lt;/form&gt;
-            </code>
-            <div class="copy" data-for="form-code" data-message="Copied Form Element!"></div>
-        </pre>
-    </div>
+                </code>
+                <div class="copy" data-for="form-code" data-message="Copied Form Element!"></div>
+            </pre>
+        </div>
+    </main>
+
+
     <script>
         hljs.highlightElement(document.getElementById("form-code"));
 
