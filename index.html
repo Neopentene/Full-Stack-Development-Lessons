@@ -56,33 +56,38 @@
         }
 
         .card {
-            max-height: 50vh;
+            max-height: 40vh;
             max-width: 70%;
             border-radius: 1rem;
             box-shadow: 0 0 0 3px var(--st-patricks-blue);
+            overflow: hidden;
         }
 
-        .card::-webkit-scrollbar {
+        ul {
+            max-height: 40vh;
+            width: 100%;
+            list-style: none;
+            overflow: auto;
+
+        }
+
+        ul::-webkit-scrollbar {
             height: 5px;
             width: 5px;
         }
 
-        .card::-webkit-scrollbar-track-piece:start,
-        .card::-webkit-scrollbar-track-piece:end {
+        ul::-webkit-scrollbar-track-piece:start,
+        ul::-webkit-scrollbar-track-piece:end {
             margin: 1.5rem;
         }
 
-        .card::-webkit-scrollbar-track,
-        .card::-webkit-scrollbar-thumb {
+        ul::-webkit-scrollbar-track,
+        ul::-webkit-scrollbar-thumb {
             background: transparent;
         }
 
-        .card:hover::-webkit-scrollbar-thumb {
+        ul:hover::-webkit-scrollbar-thumb {
             background-color: var(--davys-grey);
-        }
-
-        ul {
-            list-style: none;
         }
 
         li {
