@@ -41,8 +41,6 @@ async function onload() {
 
       root.childNodes.forEach((node) => {
         let id = node.nodeName == "#text" ? null : node.getAttribute("for");
-        console.log(id);
-
         if (id) {
           let el = document.getElementById(id);
 
