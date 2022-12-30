@@ -26,6 +26,11 @@ function generateNotification(text = "", id = "") {
 let fileName = document.body.getAttribute("data-file");
 
 async function onload() {
+  let url = `/codes/${fileName}.xml`;
+  if (/.*github.*/gm.test(location.hostname)) {
+    //Full-Stack-Development-Lessons
+    url = "/Full-Stack-Development-Lessons/" + url;
+  }
   await fetch(`/codes/${fileName}.xml`)
     .then((response) => response.text())
     .then((rawXML) => {
