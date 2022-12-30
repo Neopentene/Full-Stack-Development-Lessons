@@ -31,7 +31,7 @@ async function onload() {
     //Full-Stack-Development-Lessons
     url = "/Full-Stack-Development-Lessons" + url;
   }
-  await fetch(`/codes/${fileName}.xml`)
+  await fetch(url)
     .then((response) => response.text())
     .then((rawXML) => {
       const parser = new DOMParser();
