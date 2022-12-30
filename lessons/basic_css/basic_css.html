@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="../../styles/theme.css">
+
+    <link rel="stylesheet" href="../../styles/code.css">
+    <script src="../../scripts/code.js" defer></script>
+
+    <link rel="preload" as="font" type="font/ttf" href="/fonts/FiraCode.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="/fonts/Simplifica.ttf" crossorigin>
+
+    <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="../../favicon.ico">
+
+    <title>Form Element</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100vh;
+            background: var(--jet);
+        }
+
+
+        header>h2 {
+            padding: 2rem;
+            color: var(--maize-crayola);
+            font-family: FiraCode;
+            text-align: center;
+        }
+
+        header>h1 {
+            padding: 3rem;
+            color: var(--maize-crayola);
+            font-family: FiraCode;
+            text-align: center;
+        }
+
+        .heading {
+            font-family: FiraCode;
+            color: var(--maize-crayola);
+        }
+
+        .heading-accent {
+            font-family: FiraCode;
+            color: var(--cornflower-blue);
+        }
+
+        .heading-dark {
+            font-family: FiraCode;
+            color: var(--st-patricks-blue);
+        }
+
+        .theory {
+            font-family: FiraCode;
+            color: var(--lavender-blush);
+        }
+
+        .nostyle {
+            display: flex;
+            padding: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nostyle>div {
+            padding: 2rem;
+            border-radius: 1rem;
+            background: white;
+            max-width: 70%;
+            overflow: auto;
+        }
+
+        .t-center {
+            text-align: center;
+        }
+
+        .indent-list {
+            margin-left: 4ch;
+        }
+
+        .p-10-t-0 {
+            padding: 10%;
+            padding-top: 0;
+        }
+
+        .max-100ch {
+            max-width: 100ch;
+        }
+    </style>
+</head>
+
+<body data-file="basic_css">
+
+    <header class="header">
+        <h1>
+            CSS Basics
+        </h1>
+    </header>
+
+    <main>
+        <article>
+            <section class="theory center p-10-t-0 max-100ch" style="margin: auto;">
+                <p>
+                    CSS is used to style an HTML document
+                </p>
+                <br>
+                <p>
+                <ul class="indent-list">
+                    <li>CSS stands for Cascading Style Sheets</li>
+                    <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
+                    <li>External stylesheets are stored in CSS files</li>
+                </ul>
+                </p>
+            </section>
+            <section>
+                <!-- CSS Properties and Units -->
+                <header>
+                    <h2>
+                        Basic Properties and Units with Example
+                    </h2>
+                </header>
+
+                <section>
+                    <p class="theory t-center">Units in CSS</p>
+                    <div class="nostyle">
+                        <div>
+                            <!-- Pixels (px) -->
+                            <p>Box of One Hundred Pixels (height and length): 100px</p>
+                            <p class="heading">id = "box1"</p>
+                            <br>
+                            <div style="width: 100px; height: 100px; box-shadow: 0 0 0 2px red;"></div>
+                            <br>
+                            <hr>
+
+                            <!-- Percent-1 (%) -->
+                            <p>Box of One Hundred Percent (height and length): 50%</p>
+                            <p class="heading">id = "box2"</p>
+                            <br>
+                            <div style="width: 50%; height: 50%; box-shadow: 0 0 0 2px red;"></div>
+                            <br>
+                            <p class="heading-accent">
+                                This box is unable to compute the height because the body has no fixed
+                                height. It is able to compute the width because it is equal to viewport. Let us make a
+                                box inside a parent with a fixed height
+                            </p>
+                            <br>
+                            <hr>
+
+                            <!-- Percent-2 (%) -->
+                            <p>
+                                <span class="heading-accent">"Outer Box"</span>
+                                of Two Hundred Pixels (height and length): 200px
+                            </p>
+                            <p>
+                                <span class="heading-accent">"Inner Box"</span>
+                                of 50% (height and length): 50%
+                            </p>
+                            <p class="heading">id = "box3"</p>
+                            <br>
+                            <div style="width: 200px; height: 200px; box-shadow: 0 0 0 2px blue;">
+                                <div style="width: 50%; height: 50%; box-shadow: 0 0 0 2px red;">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Background -->
+                <section>
+                    <p class="theory t-center">Background</p>
+                    <div class="nostyle">
+                        <div style="width: 70vh; background: teal;">
+                            <form action="/">
+                                <label for="username">Username</label><br>
+                                <input type="text" name="username" id="username"><br>
+
+                                <label for="password">Password</label><br>
+                                <input type="password" name="password" id="password"><br>
+
+                                <input type="radio" name="role" id="admin" value="admin">
+                                <label for="admin">Admin</label>
+                                <input type="radio" name="role" id="client" value="client">
+                                <label for="client">Client</label>
+
+                                <br>
+
+                                <input type="checkbox" name="agreement" id="agreement">
+                                <label for="agreement">I Agree</label><br>
+
+                                <input type="submit">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="code">
+                        <pre>
+                            <code id="css-background">
+                            </code>
+                            <div class="copy" data-for="css-background" data-message="Copied Code!"></div>
+                        </pre>
+                    </div>
+                </section>
+
+            </section>
+        </article>
+
+        <div class="code">
+            <pre>
+                <code id="form-code"></code>
+                <div class="copy" data-for="form-code" data-message="Copied Form Element!"></div>
+            </pre>
+        </div>
+    </main>
+
+
+
+</body>
+
+</html>

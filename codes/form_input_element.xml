@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codes>
+<rawhtml for="form-code">
+<form action="/">
+    <!-- Type Text -->
+    <label for="username">Username</label><br>
+    <input type="text" name="username" id="username"><br>
+
+    <!-- Type Password -->
+    <label for="password">Password</label><br>
+    <input type="password" name="password" id="password"><br>
+
+    <!-- Type Radio -->
+    <input type="radio" name="role" id="admin" value="admin">
+    <label for="admin">Admin</label>
+    <input type="radio" name="role" id="client" value="client">
+    <label for="client">Client</label>
+
+    <br>
+
+    <!-- Type Checkbox -->
+    <input type="checkbox" name="agreement" id="agreement">
+    <label for="agreement">I Agree</label><br>
+
+    <!-- Type Submit -->
+    <input type="submit">
+</form>
+</rawhtml>
+</codes>

@@ -34,9 +34,9 @@
         }
 
 
-        header>h2 {
-            padding: 2rem;
-            color: var(--lavender-blush);
+        header>h1 {
+            padding: 3rem;
+            color: var(--maize-crayola);
             font-family: FiraCode;
             text-align: center;
         }
@@ -71,9 +71,9 @@
 <body>
 
     <header>
-        <h2>
+        <h1>
             Form Element and Few Input Types
-        </h2>
+        </h1>
     </header>
 
     <main>
@@ -106,12 +106,15 @@
             <pre>
                 <code id="form-code">
 &lt;form action="/"&gt;
+    &lt;!-- Type Text --&gt;
     &lt;label for="username"&gt;Username&lt;/label&gt;&lt;br&gt;
     &lt;input type="text" name="username" id="username"&gt;&lt;br&gt;
 
+    &lt;!-- Type Password --&gt;
     &lt;label for="password"&gt;Password&lt;/label&gt;&lt;br&gt;
     &lt;input type="password" name="password" id="password"&gt;&lt;br&gt;
 
+    &lt;!-- Type Radio --&gt;
     &lt;input type="radio" name="role" id="admin" value="admin"&gt;
     &lt;label for="admin"&gt;Admin&lt;/label&gt;
     &lt;input type="radio" name="role" id="client" value="client"&gt;
@@ -119,9 +122,11 @@
 
     &lt;br&gt;
 
+    &lt;!-- Type Checkbox --&gt;
     &lt;input type="checkbox" name="agreement" id="agreement"&gt;
     &lt;label for="agreement"&gt;I Agree&lt;/label&gt;&lt;br&gt;
 
+    &lt;!-- Type Submit --&gt;
     &lt;input type="submit"&gt;
 &lt;/form&gt;
                 </code>
