@@ -63,3 +63,7 @@
   color: var(--lavender-blush);
   font-family: FiraCode;
 }
+
+.code pre > div.copy.disabled {
+  display: none;
+}

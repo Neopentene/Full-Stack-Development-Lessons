@@ -8,7 +8,7 @@
 - HTML codes are surrounded by the following tag `<rawhtml></rawhtml>`
 - For any other type of code format the following tag is used `<render></render>`
 - All the above tags have the attribute `for`. This attribute is used to find the id of the code element that will host the code written inside. Usage Example: `<css for="id-name"></css>`
-- Remember that `<![CDATA[]>` is used for markups
+- Remember that `<![CDATA[]>` is used for markup text
 
 ### Note
 

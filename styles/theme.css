@@ -38,3 +38,18 @@
   --lavender-blush: #f9e9ecff;
   --tickle-me-pink: #f88dadff;
 }
+
+.nostyle {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nostyle > div {
+  padding: 2rem;
+  border-radius: 1rem;
+  background: white;
+  max-width: 70%;
+  overflow: auto;
+}

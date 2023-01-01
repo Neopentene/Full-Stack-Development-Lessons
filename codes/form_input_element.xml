@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codes>
 <rawhtml for="form-code">
+<![CDATA[
 <form action="/">
     <!-- Type Text -->
     <label for="username">Username</label><br>
@@ -25,5 +26,6 @@
     <!-- Type Submit -->
     <input type="submit">
 </form>
+]]>
 </rawhtml>
 </codes>

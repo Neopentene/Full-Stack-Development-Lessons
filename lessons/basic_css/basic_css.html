@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="preload" as="font" type="font/ttf" href="../../fonts/FiraCode.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="../../fonts/Simplifica.ttf" crossorigin>
+
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
 
@@ -14,11 +17,8 @@
     <link rel="stylesheet" href="../../styles/code.css">
     <script src="../../scripts/code.js" defer></script>
 
-    <link rel="preload" as="font" type="font/ttf" href="../../fonts/FiraCode.ttf" crossorigin>
-    <link rel="preload" as="font" type="font/ttf" href="../../fonts/Simplifica.ttf" crossorigin>
-
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="../../favicon.ico">
+    <link rel="manifest" href="../../manifest.json">
 
     <title>Form Element</title>
 
@@ -68,21 +68,6 @@
         .theory {
             font-family: FiraCode;
             color: var(--lavender-blush);
-        }
-
-        .nostyle {
-            display: flex;
-            padding: 1rem;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .nostyle>div {
-            padding: 2rem;
-            border-radius: 1rem;
-            background: white;
-            max-width: 70%;
-            overflow: auto;
         }
 
         .t-center {
@@ -212,7 +197,7 @@
                         <pre>
                             <code id="css-background">
                             </code>
-                            <div class="copy" data-for="css-background" data-message="Copied Code!"></div>
+                            <div class="copy disabled" data-for="css-background"></div>
                         </pre>
                     </div>
                 </section>
@@ -223,7 +208,7 @@
         <div class="code">
             <pre>
                 <code id="form-code"></code>
-                <div class="copy" data-for="form-code" data-message="Copied Form Element!"></div>
+                <div class="copy disabled" data-for="form-code"></div>
             </pre>
         </div>
     </main>
