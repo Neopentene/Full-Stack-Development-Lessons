@@ -6,7 +6,7 @@
 
 .code pre {
   position: relative;
-  margin: 0;
+  margin: 24px;
   padding: 0;
   max-width: 80%;
 }
@@ -40,7 +40,7 @@
   position: absolute;
   height: 32px;
   width: 32px;
-  top: 24px;
+  top: 1em;
   right: 5%;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuklEQVR4nN2UsQ2DMBBFX52CCaBmCGAK0ngHFksa5mCXCCWkoHRkyWkcbPlORAr50q8s/2ed/A/+TSegBc6AididdUChCe8TwSZw7+9kqxWEG+9GAkiNxSTGlS2j9DEAAzABK2AjXoARqKWAAXgmgkPPQCUBTILwt68SwKoAPCTf1Cr9oe7bgCKyKuxeAPxuaYJx2T0BW7KHByyK8LsEMCoAFwmg9vXPDb8BJUJVvv6uoan2upeLw39bL8nQ4F3mbEqCAAAAAElFTkSuQmCC")
     no-repeat center;
