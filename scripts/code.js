@@ -7,7 +7,8 @@ function generateCodeBlock(id = "", message = "") {
   const div = document.createElement("div");
 
   code.id = id;
-  div.classList.add(["copy", "disabled"]);
+  div.classList.add("copy");
+  div.classList.add("disabled");
   div.setAttribute("data-for", id);
   if (message && message != "") div.setAttribute("data-message", message);
 
