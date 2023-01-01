@@ -1,4 +1,31 @@
 // if(expression) return => Any code that follows this pattern is a guard clause
+
+// Function to generate code's html boiler plate
+function generateCodeBlock(id = "", message = "") {
+  const pre = document.createElement("pre");
+  const code = document.createElement("code");
+  const div = document.createElement("div");
+
+  code.id = id;
+  div.classList.add(["copy", "disabled"]);
+  div.setAttribute("data-for", id);
+  if (message && message != "") div.setAttribute("data-message", message);
+
+  pre.appendChild(code);
+  pre.appendChild(div);
+
+  return pre;
+}
+
+// Function to create code blocks at a specific location
+function addCodeBlocks() {
+  document.querySelectorAll(".code").forEach((el) => {
+    const id = el.getAttribute("data-id");
+    const message = el.getAttribute("data-message");
+    el.appendChild(generateCodeBlock(id, message));
+  });
+}
+
 // Function to generate a notification div, can be used for other purposes
 function generateNotification(text = "", id = "") {
   const div = document.createElement("div");
@@ -134,6 +161,7 @@ function addCopyEventListeners() {
 // IIFE => Immediately Invoked Function Expression
 // IIFE executes as soon as the script is loaded, hence the name
 (async function onload() {
+  addCodeBlocks();
   await addSnippetsToCodeBlocks();
   generateCopyEvents();
   addCopyEventListeners();
