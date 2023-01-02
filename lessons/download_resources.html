@@ -103,23 +103,25 @@
 </head>
 
 <body>
-
-    <header>
-        <h1>
-            Download Fonts
-        </h1>
-    </header>
-
     <main>
-        <div class="card">
-            <ul id="links">
-                <li><a href="../fonts/FiraCode.ttf" download="">Fira Code</a></li>
-                <li><a href="../fonts/Simplifica.ttf" download="">Simplifica</a></li>
-            </ul>
-        </div>
+        <section>
+            <header>
+                <h1>
+                    Download Fonts
+                </h1>
+            </header>
+            <main>
+                <div class="card">
+                    <ul class="links">
+                        <li><a href="../fonts/FiraCode.ttf" download>Fira Code</a></li>
+                        <li><a href="../fonts/Simplifica.ttf" download>Simplifica</a></li>
+                    </ul>
+                </div>
+            </main>
+        </section>
     </main>
     <script>
-        document.querySelectorAll("#links > li").forEach((el) => {
+        document.querySelectorAll(".links > li").forEach((el) => {
             el.addEventListener("click", (event) => {
                 if (event.target == el)
                     el.firstChild.click();
