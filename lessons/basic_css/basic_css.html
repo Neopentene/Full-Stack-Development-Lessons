@@ -122,46 +122,50 @@
 
                 <section>
                     <p class="theory t-center">Units in CSS</p>
-                    <div class="nostyle">
-                        <div>
-                            <!-- Pixels (px) -->
-                            <p>Box of One Hundred Pixels (height and length): 100px</p>
-                            <p class="heading">id = "box1"</p>
-                            <br>
-                            <div style="width: 100px; height: 100px; box-shadow: 0 0 0 2px red;"></div>
-                            <br>
-                            <hr>
+                    <div class="viewport">
+                        <div class="renderer">
+                            <div class="screen">
+                                <!-- Pixels (px) -->
+                                <p>Box of One Hundred Pixels (height and length): 100px</p>
+                                <p class="heading">id = "box1"</p>
+                                <br>
+                                <div style="margin: 5px; width: 100px; height: 100px; box-shadow: 0 0 0 2px red;"></div>
+                                <br>
+                                <hr>
 
-                            <!-- Percent-1 (%) -->
-                            <p>Box of One Hundred Percent (height and length): 50%</p>
-                            <p class="heading">id = "box2"</p>
-                            <br>
-                            <div style="width: 50%; height: 50%; box-shadow: 0 0 0 2px red;"></div>
-                            <br>
-                            <p class="heading-accent">
-                                This box is unable to compute the height because the body has no fixed
-                                height. It is able to compute the width because it is equal to viewport. Let us make a
-                                box inside a parent with a fixed height
-                            </p>
-                            <br>
-                            <hr>
+                                <!-- Percent-1 (%) -->
+                                <p>Box of One Hundred Percent (height and length): 50%</p>
+                                <p class="heading">id = "box2"</p>
+                                <br>
+                                <div style="margin: 5px; width: 50%; height: 50%; box-shadow: 0 0 0 2px red;"></div>
+                                <br>
+                                <p class="heading-accent">
+                                    This box is unable to compute the height because the body has no fixed
+                                    height. It is able to compute the width because it is equal to viewport. Let us make
+                                    a
+                                    box inside a parent with a fixed height
+                                </p>
+                                <br>
+                                <hr>
 
-                            <!-- Percent-2 (%) -->
-                            <p>
-                                <span class="heading-accent">"Outer Box"</span>
-                                of Two Hundred Pixels (height and length): 200px
-                            </p>
-                            <p>
-                                <span class="heading-accent">"Inner Box"</span>
-                                of 50% (height and length): 50%
-                            </p>
-                            <p class="heading">id = "box3"</p>
-                            <br>
-                            <div style="width: 200px; height: 200px; box-shadow: 0 0 0 2px blue;">
-                                <div style="width: 50%; height: 50%; box-shadow: 0 0 0 2px red;">
+                                <!-- Percent-2 (%) -->
+                                <p>
+                                    <span class="heading-accent">"Outer Box"</span>
+                                    of Two Hundred Pixels (height and length): 200px
+                                </p>
+                                <p>
+                                    <span class="heading-accent">"Inner Box"</span>
+                                    of 50% (height and length): 50%
+                                </p>
+                                <p class="heading">id = "box3"</p>
+                                <br>
+                                <div style="margin: 5px; width: 200px; height: 200px; box-shadow: 0 0 0 2px blue;">
+                                    <div style="width: 50%; height: 50%; box-shadow: 0 0 0 2px red;">
 
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </section>
@@ -170,27 +174,31 @@
                 <!-- Background -->
                 <section>
                     <p class="theory t-center">Background</p>
-                    <div class="nostyle">
-                        <div style="width: 70vh; background: teal;">
-                            <form action="/">
-                                <label for="username">Username</label><br>
-                                <input type="text" name="username" id="username"><br>
+                    <div class="viewport">
+                        <div class="renderer">
+                            <div class="screen">
+                                <div style="width: 70vh; background: teal;">
+                                    <form action="/">
+                                        <label for="username">Username</label><br>
+                                        <input type="text" name="username" id="username"><br>
 
-                                <label for="password">Password</label><br>
-                                <input type="password" name="password" id="password"><br>
+                                        <label for="password">Password</label><br>
+                                        <input type="password" name="password" id="password"><br>
 
-                                <input type="radio" name="role" id="admin" value="admin">
-                                <label for="admin">Admin</label>
-                                <input type="radio" name="role" id="client" value="client">
-                                <label for="client">Client</label>
+                                        <input type="radio" name="role" id="admin" value="admin">
+                                        <label for="admin">Admin</label>
+                                        <input type="radio" name="role" id="client" value="client">
+                                        <label for="client">Client</label>
 
-                                <br>
+                                        <br>
 
-                                <input type="checkbox" name="agreement" id="agreement">
-                                <label for="agreement">I Agree</label><br>
+                                        <input type="checkbox" name="agreement" id="agreement">
+                                        <label for="agreement">I Agree</label><br>
 
-                                <input type="submit">
-                            </form>
+                                        <input type="submit">
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="code" data-id="css-background"></div>

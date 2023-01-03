@@ -28,6 +28,7 @@
             padding: 0;
             margin: 0;
             box-sizing: border-box;
+            outline: 1px solid red;
         }
 
         html,
@@ -55,27 +56,29 @@
     </header>
 
     <main>
-        <div class="nostyle">
-            <div>
-                <form action="/">
-                    <label for="username">Username</label><br>
-                    <input type="text" name="username" id="username"><br>
+        <div class="viewport">
+            <div class="renderer">
+                <div class="screen">
+                    <form action="/">
+                        <label for="username">Username</label><br>
+                        <input type="text" name="username" id="username"><br>
 
-                    <label for="password">Password</label><br>
-                    <input type="password" name="password" id="password"><br>
+                        <label for="password">Password</label><br>
+                        <input type="password" name="password" id="password"><br>
 
-                    <input type="radio" name="role" id="admin" value="admin">
-                    <label for="admin">Admin</label>
-                    <input type="radio" name="role" id="client" value="client">
-                    <label for="client">Client</label>
+                        <input type="radio" name="role" id="admin" value="admin">
+                        <label for="admin">Admin</label>
+                        <input type="radio" name="role" id="client" value="client">
+                        <label for="client">Client</label>
 
-                    <br>
+                        <br>
 
-                    <input type="checkbox" name="agreement" id="agreement">
-                    <label for="agreement">I Agree</label><br>
+                        <input type="checkbox" name="agreement" id="agreement">
+                        <label for="agreement">I Agree</label><br>
 
-                    <input type="submit">
-                </form>
+                        <input type="submit">
+                    </form>
+                </div>
             </div>
         </div>
 

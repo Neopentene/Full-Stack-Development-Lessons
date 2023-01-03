@@ -37,19 +37,24 @@
   --maize-crayola: #fac748ff;
   --lavender-blush: #f9e9ecff;
   --tickle-me-pink: #f88dadff;
+  --davys-grey-opaque: rgb(81, 80, 82, 0.5);
 }
 
-.nostyle {
+.viewport {
   display: flex;
-  padding: 1rem;
-  justify-content: center;
-  align-items: center;
+  margin: 1rem;
 }
 
-.nostyle > div {
-  padding: 2rem;
+.viewport > .renderer {
   border-radius: 1rem;
   background: white;
   max-width: 70%;
+  margin: auto;
+}
+
+.viewport > .renderer > .screen {
+  outline: 2px dotted var(--davys-grey);
+  margin: 1rem;
+  max-height: 420px;
   overflow: auto;
 }

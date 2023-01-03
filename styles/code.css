@@ -1,14 +1,19 @@
 .code {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-block: 2rem;
+  overflow: hidden;
 }
 
 .code pre {
   position: relative;
-  margin: 24px;
-  padding: 0;
+  margin: auto;
   max-width: 80%;
+}
+
+.code pre > code {
+  border-radius: 1rem;
+  max-height: 30rem;
+  overflow: overlay;
 }
 
 .code pre > code::-webkit-scrollbar {
@@ -24,16 +29,13 @@
 }
 
 .code pre > code::-webkit-scrollbar-track,
-.code pre > code::-webkit-scrollbar-thumb {
+.code pre > code::-webkit-scrollbar-thumb,
+.code pre > code::-webkit-scrollbar-corner {
   background: transparent;
 }
 
 .code pre > code:hover::-webkit-scrollbar-thumb {
-  background-color: var(--davys-grey);
-}
-
-.code pre > code {
-  border-radius: 1rem;
+  background-color: var(--davys-grey-opaque);
 }
 
 .code pre > div.copy {
