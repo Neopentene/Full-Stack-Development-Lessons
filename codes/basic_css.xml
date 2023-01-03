@@ -10,6 +10,38 @@
 ]]>
 </css>
 
+<css for="css-pixel-unit">
+<![CDATA[
+<style>
+    #box1 {
+        width: 100px;
+        height: 100px;
+    }
+</style>
+]]>
+</css>
+
+<css for="css-percent-unit">
+<![CDATA[
+<style>
+    #box2 {
+        width: 50%;
+        height: 50%;
+    }
+
+    #box3 {
+        width: 200px;
+        height: 200px;
+    }
+
+    #box3 > div {
+        width: 50%;
+        height: 50%;
+    }
+</style>
+]]>
+</css>
+
 <rawhtml for="form-code">
 <![CDATA[
 <form action="/">

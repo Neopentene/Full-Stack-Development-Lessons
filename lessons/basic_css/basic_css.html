@@ -79,8 +79,8 @@
             margin-left: 4ch;
         }
 
-        .p-i-10 {
-            padding-inline: 10%;
+        .p-i-5 {
+            padding-inline: 5%;
         }
 
         .max-100ch {
@@ -99,13 +99,13 @@
 
     <main>
         <article>
-            <section class="theory center p-10-t-0 max-100ch" style="margin: auto;">
-                <p>
+            <section class="theory max-100ch" style="margin: auto;">
+                <p class=" t-center">
                     CSS is used to style an HTML document
                 </p>
                 <br>
                 <p>
-                <ul class="indent-list">
+                <ul class="indent-list p-i-5">
                     <li>CSS stands for Cascading Style Sheets</li>
                     <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
                     <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
@@ -121,20 +121,33 @@
                     </h2>
                 </header>
 
+                <!-- Pixel Unit -->
                 <section>
-                    <p class="theory t-center">Units in CSS</p>
+                    <p class="theory t-center">
+                        Units in CSS (px)
+                    </p>
                     <div class="viewport">
                         <div class="renderer">
                             <div class="screen">
-                                <!-- Pixels (px) -->
                                 <p>Box of One Hundred Pixels (height and length): 100px</p>
                                 <p class="heading">id = "box1"</p>
                                 <br>
                                 <div style="margin: 5px; width: 100px; height: 100px; box-shadow: 0 0 0 2px red;"></div>
-                                <br>
-                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code" data-id="css-pixel-unit"></div>
+                </section>
 
-                                <!-- Percent-1 (%) -->
+                <!-- Percentage Unit -->
+                <section>
+                    <p class="theory t-center">
+                        Units in CSS (%)
+                    </p>
+                    <div class="viewport">
+                        <div class="renderer">
+                            <div class="screen">
+                                <!-- Percent-Part-1 (%) -->
                                 <p>Box of One Hundred Percent (height and length): 50%</p>
                                 <p class="heading">id = "box2"</p>
                                 <br>
@@ -149,7 +162,7 @@
                                 <br>
                                 <hr>
 
-                                <!-- Percent-2 (%) -->
+                                <!-- Percent-Part-2 (%) -->
                                 <p>
                                     <span class="heading-accent">"Outer Box"</span>
                                     of Two Hundred Pixels (height and length): 200px
@@ -161,14 +174,12 @@
                                 <p class="heading">id = "box3"</p>
                                 <br>
                                 <div style="margin: 5px; width: 200px; height: 200px; box-shadow: 0 0 0 2px blue;">
-                                    <div style="width: 50%; height: 50%; box-shadow: 0 0 0 2px red;">
-
-                                    </div>
+                                    <div style="width: 50%; height: 50%; box-shadow: 0 0 0 2px red;"></div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
+                    <div class="code" data-id="css-percent-unit"></div>
                 </section>
 
 
