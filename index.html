@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styles/theme.css">
+    <script src="scripts/theme.js" defer></script>
 
     <link rel="preload" as="font" type="font/ttf" href="fonts/FiraCode.ttf" crossorigin>
     <link rel="preload" as="font" type="font/ttf" href="fonts/Simplifica.ttf" crossorigin>
@@ -53,6 +54,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            padding-bottom: 7.5%;
         }
 
         .card {
@@ -67,26 +69,6 @@
             max-height: 40vh;
             width: 100%;
             list-style: none;
-            overflow: overlay;
-        }
-
-        ul::-webkit-scrollbar {
-            height: 5px;
-            width: 5px;
-        }
-
-        ul::-webkit-scrollbar-track-piece:start,
-        ul::-webkit-scrollbar-track-piece:end {
-            margin: 1.5rem;
-        }
-
-        ul::-webkit-scrollbar-track,
-        ul::-webkit-scrollbar-thumb {
-            background: transparent;
-        }
-
-        ul:hover::-webkit-scrollbar-thumb {
-            background-color: var(--davys-grey-opaque);
         }
 
         li {
@@ -98,7 +80,8 @@
             -webkit-tap-highlight-color: transparent;
         }
 
-        li:hover {
+        li:hover,
+        li:focus {
             background-color: var(--cornflower-blue);
             color: var(--jet);
             font-weight: bold;
@@ -113,7 +96,7 @@
     </header>
     <main>
         <div class="card">
-            <ul id="lessons">
+            <ul id="lessons" class="scroll">
                 <li data-route="download_resources">Download Resources</li>
                 <li data-route="structure_of_html">Structure of HTML</li>
                 <li data-route="basic_tags">Basic HTML Tags</li>

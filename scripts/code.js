@@ -12,9 +12,26 @@ function generateCodeBlock(id = "", message = "") {
   const div = document.createElement("div");
 
   code.id = id;
+  code.className = "scroll";
   div.className = "copy disabled";
   div.setAttribute("data-for", id);
   if (message && message != "") div.setAttribute("data-message", message);
+
+  code.addEventListener(
+    "touchstart",
+    () => {
+      code.classList.add("scrolling");
+    },
+    true
+  );
+
+  code.addEventListener(
+    "touchend",
+    () => {
+      code.classList.remove("scrolling");
+    },
+    true
+  );
 
   pre.appendChild(code);
   pre.appendChild(div);

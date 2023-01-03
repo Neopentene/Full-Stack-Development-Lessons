@@ -1,3 +1,5 @@
+@import url(theme.css);
+
 .code {
   display: flex;
   padding-block: 2rem;
@@ -14,28 +16,6 @@
   border-radius: 1rem;
   max-height: 30rem;
   overflow: overlay;
-}
-
-.code pre > code::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-
-.code pre > code::-webkit-scrollbar-track-piece:start,
-.code pre > code::-webkit-scrollbar-track-piece:end {
-  margin: 1.5rem;
-  margin-right: 1.5rem;
-  margin-left: 1.5rem;
-}
-
-.code pre > code::-webkit-scrollbar-track,
-.code pre > code::-webkit-scrollbar-thumb,
-.code pre > code::-webkit-scrollbar-corner {
-  background: transparent;
-}
-
-.code pre > code:hover::-webkit-scrollbar-thumb {
-  background-color: var(--davys-grey-opaque);
 }
 
 .code pre > div.copy {

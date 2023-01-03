@@ -48,7 +48,7 @@
 .viewport > .renderer {
   border-radius: 1rem;
   background: white;
-  max-width: 70%;
+  max-width: 90%;
   margin: auto;
 }
 
@@ -57,4 +57,35 @@
   margin: 1rem;
   max-height: 420px;
   overflow: auto;
+}
+
+.scroll {
+  overflow: auto;
+  overflow: overlay;
+}
+
+.scroll::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+
+.scroll::-webkit-scrollbar-track-piece:start,
+.scroll::-webkit-scrollbar-track-piece:end {
+  margin: 1.5rem;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+
+.scroll::-webkit-scrollbar-track,
+.scroll::-webkit-scrollbar-thumb,
+.scroll::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.scroll:hover::-webkit-scrollbar-thumb {
+  background-color: var(--davys-grey-opaque);
+}
+
+.scrolling::-webkit-scrollbar-thumb {
+  background-color: var(--davys-grey-opaque);
 }
