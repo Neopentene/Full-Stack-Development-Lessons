@@ -21,7 +21,7 @@
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
     <link rel="manifest" href="../../manifest.json">
 
-    <title>Form Element</title>
+    <title>Basic CSS</title>
 
     <style>
         * {
@@ -51,47 +51,106 @@
             text-align: center;
         }
 
-        .heading {
-            font-family: FiraCode;
-            color: var(--maize-crayola);
-        }
-
-        .heading-accent {
-            font-family: FiraCode;
-            color: var(--cornflower-blue);
-        }
-
-        .heading-dark {
-            font-family: FiraCode;
-            color: var(--st-patricks-blue);
+        hr {
+            height: 0;
+            border: none;
+            border-top: 4px solid var(--jet);
         }
 
         .theory {
+            border-radius: 1rem;
             font-family: FiraCode;
+            margin: 1rem;
+            padding: 1rem;
+        }
+
+        .border {
+            border: 3px solid var(--davys-grey);
+            border-radius: 1.25rem;
+        }
+
+        .theory.primary {
+            background-color: var(--st-patricks-blue);
             color: var(--lavender-blush);
         }
 
-        .t-center {
-            text-align: center;
+        .theory.accent {
+            background-color: var(--lavender-blush);
+            color: var(--st-patricks-blue);
+        }
+
+        .theory.info {
+            background-color: var(--jet);
+            color: var(--maize-crayola);
+        }
+
+        .theory.fit {
+            border-radius: 0;
+            margin: 0;
+            padding: 0 1em;
+        }
+
+        .max-w-700px {
+            max-width: 700px;
+        }
+
+        .max-w-70 {
+            max-width: 70%;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .d-flex.d-center {
+            align-items: center;
+            justify-content: center;
+        }
+
+        .d-flex.d-col {
+            flex-direction: column;
         }
 
         .indent-list {
             margin-left: 4ch;
         }
 
-        .p-i-5 {
-            padding-inline: 5%;
+        .indent-list a {
+            color: currentColor;
+            text-decoration: underline;
         }
 
-        .max-100ch {
-            max-width: 100ch;
+        .indent-list a:visited {
+            color: var(--tickle-me-pink);
+        }
+
+        .t-center {
+            text-align: center;
+        }
+
+        .m-auto {
+            margin: auto;
+        }
+
+        .m-t-2rem {
+            margin-top: 2rem;
+        }
+
+        .m-b-2rem {
+            margin-bottom: 2rem;
+        }
+
+        @media only screen and (min-width: 720px) {
+            .limit-w {
+                max-width: 900px;
+            }
         }
     </style>
 </head>
 
 <body data-file="basic_css">
 
-    <header class="header">
+    <header>
         <h1>
             CSS Basics
         </h1>
@@ -99,13 +158,13 @@
 
     <main>
         <article>
-            <section class="theory max-100ch" style="margin: auto;">
-                <p class=" t-center">
+            <section class="theory primary d-flex d-center d-col m-auto max-w-700px">
+                <p class="t-center">
                     CSS is used to style an HTML document
                 </p>
                 <br>
                 <p>
-                <ul class="indent-list p-i-5">
+                <ul class="indent-list">
                     <li>CSS stands for Cascading Style Sheets</li>
                     <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media</li>
                     <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once</li>
@@ -113,7 +172,25 @@
                 </ul>
                 </p>
             </section>
-            <section>
+            <section class="theory primary m-t-2rem d-flex d-center d-col m-auto max-w-700px">
+                <header>
+                    <h2>Table of Contents</h2>
+                </header>
+                <main class="m-b-2rem">
+                    <ol id="table-of-contents" class="indent-list">
+                        <li>
+                            <a href="#theory-basic-units-and-properties">Basic Units and Properties</a>
+                            <ol class="indent-list" style="list-style: lower-latin;">
+                                <li><a href="#theory-css-unit-pixel">Pixel Unit</a></li>
+                                <li><a href="#theory-css-unit-percentage">Percentage Unit</a></li>
+                                <li><a href="#theory-css-unit-relative">Relative Unit</a></li>
+                                <li><a href="#theory-css-property-background">Background</a></li>
+                            </ol>
+                        </li>
+                    </ol>
+                </main>
+            </section>
+            <section id="theory-basic-units-and-properties">
                 <!-- CSS Properties and Units -->
                 <header>
                     <h2>
@@ -122,15 +199,15 @@
                 </header>
 
                 <!-- Pixel Unit -->
-                <section>
-                    <p class="theory t-center">
+                <section id="theory-css-unit-pixel" class="border limit-w m-auto">
+                    <p class="theory accent m-auto max-w-700px t-center">
                         Units in CSS (px)
                     </p>
                     <div class="viewport">
                         <div class="renderer">
                             <div class="screen">
-                                <p>Box of One Hundred Pixels (height and length): 100px</p>
-                                <p class="heading">id = "box1"</p>
+                                <p class="theory info">Box of One Hundred Pixels (height and length): 100px</p>
+                                <p class="theory primary">id = "box1"</p>
                                 <br>
                                 <div style="margin: 5px; width: 100px; height: 100px; box-shadow: 0 0 0 2px red;"></div>
                             </div>
@@ -140,20 +217,20 @@
                 </section>
 
                 <!-- Percentage Unit -->
-                <section>
-                    <p class="theory t-center">
+                <section id="theory-css-unit-percentage" class="border limit-w m-auto m-t-2rem">
+                    <p class="theory accent m-auto max-w-700px t-center">
                         Units in CSS (%)
                     </p>
                     <div class="viewport">
                         <div class="renderer">
                             <div class="screen">
                                 <!-- Percent-Part-1 (%) -->
-                                <p>Box of One Hundred Percent (height and length): 50%</p>
-                                <p class="heading">id = "box2"</p>
+                                <p class="theory info">Box of Fifty Percent (height and length): 50%</p>
+                                <p class="theory primary">id = "box2"</p>
                                 <br>
                                 <div style="margin: 5px; width: 50%; height: 50%; box-shadow: 0 0 0 2px red;"></div>
                                 <br>
-                                <p class="heading-accent">
+                                <p class="theory accent">
                                     This box is unable to compute the height because the body has no fixed
                                     height. It is able to compute the width because it is equal to viewport. Let us make
                                     a
@@ -163,15 +240,15 @@
                                 <hr>
 
                                 <!-- Percent-Part-2 (%) -->
-                                <p>
-                                    <span class="heading-accent">"Outer Box"</span>
+                                <p class="theory info">
+                                    <span class="theory primary fit">"Outer Box"</span>
                                     of Two Hundred Pixels (height and length): 200px
                                 </p>
-                                <p>
-                                    <span class="heading-accent">"Inner Box"</span>
+                                <p class=" theory info">
+                                    <span class="theory primary fit">"Inner Box"</span>
                                     of 50% (height and length): 50%
                                 </p>
-                                <p class="heading">id = "box3"</p>
+                                <p class="theory primary">id = "box3"</p>
                                 <br>
                                 <div style="margin: 5px; width: 200px; height: 200px; box-shadow: 0 0 0 2px blue;">
                                     <div style="width: 50%; height: 50%; box-shadow: 0 0 0 2px red;"></div>
@@ -182,14 +259,66 @@
                     <div class="code" data-id="css-percent-unit"></div>
                 </section>
 
-
-                <!-- Background -->
-                <section>
-                    <p class="theory t-center">Background</p>
+                <!-- rem and em Unit -->
+                <section id="theory-css-unit-relative" class="border limit-w m-auto m-t-2rem">
+                    <p class="theory accent m-auto max-w-700px t-center">
+                        Units in CSS (rem & em)
+                    </p>
                     <div class="viewport">
                         <div class="renderer">
                             <div class="screen">
-                                <div style="width: 70vh; background: teal;">
+                                <!-- REM (rem) -->
+                                <p class="theory info">Box of 4rem (height and length): 4rem</p>
+                                <p class="theory primary">id = "box4"</p>
+                                <br>
+                                <div style="margin: 5px; width: 4em; height: 4em; box-shadow: 0 0 0 2px red;"></div>
+                                <br>
+                                <p class="theory accent">
+                                    rem - is a relative unit that refers the font of root element. In our case 1rem =
+                                    16px, therefore 4rem = 64px. The font size of the root element can be affected by
+                                    user's preference in the browser settings.
+                                </p>
+
+                                <br>
+                                <hr>
+
+                                <!-- EM (em) -->
+                                <p class="theory info">
+                                    <span class="theory primary fit">"Outer Box"</span>
+                                    of Two Hundred Pixels (height and length): <u>200px</u>, and font size of
+                                    <u>12px</u>
+                                </p>
+                                <p class=" theory info">
+                                    <span class="theory primary fit">"Inner Box"</span>
+                                    of 4em (height and length): 4em
+                                </p>
+                                <p class="theory primary">id = "box5"</p>
+                                <br>
+                                <div
+                                    style="margin: 5px; width: 200px; height: 200px; box-shadow: 0 0 0 2px blue; font-size: 12px;">
+                                    <div style="width: 4em; height: 4em; box-shadow: 0 0 0 2px red;"></div>
+                                </div>
+                                <p class="theory accent">
+                                    em - is another relative but with one difference, if applied to a child element it
+                                    will refer to the font size of parent element. In our case the inner box will have
+                                    the following size, 4em = (12 * 4)px = 48px
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code" data-id="css-relative-unit"></div>
+                </section>
+
+
+                <!-- Background -->
+                <section id="theory-css-property-background" class="border limit-w m-auto m-t-2rem">
+                    <p class="theory accent m-auto max-w-700px t-center">
+                        Background
+                    </p>
+                    <div class="viewport">
+                        <div class="renderer">
+                            <div class="screen">
+                                <div style="background: teal;">
                                     <form action="/">
                                         <label for="username">Username</label><br>
                                         <input type="text" name="username" id="username"><br>
@@ -214,16 +343,12 @@
                         </div>
                     </div>
                     <div class="code" data-id="css-background"></div>
+                    <div class="code" data-id="form-code"></div>
                 </section>
-
             </section>
         </article>
-
-        <div class="code" data-id="form-code"></div>
     </main>
-
-
-
+    <button class="to-top" data-target="table-of-contents"></button>
 </body>
 
 </html>

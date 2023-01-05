@@ -17,6 +17,7 @@ function generateCodeBlock(id = "", message = "") {
   div.setAttribute("data-for", id);
   if (message && message != "") div.setAttribute("data-message", message);
 
+  // Handle scroll event on mobile devices
   code.addEventListener(
     "touchstart",
     () => {
@@ -124,6 +125,9 @@ async function addSnippetsToCodeBlocks() {
     if (!el) return;
     el.textContent = node.textContent.trim();
     hljs.highlightElement(el);
+
+    // Generate copy event for code block
+    _generateCopyEvent(id);
   });
 }
 
@@ -131,24 +135,24 @@ async function addSnippetsToCodeBlocks() {
  * @description Add the feature to copy a code block with a button at the side
  * @returns undefined
  */
-function generateCopyEvents() {
-  document.querySelectorAll(".code pre > div.copy").forEach((el) => {
-    // Make the copy button visible
-    el.classList.remove("disabled");
-    el.addEventListener("click", () => {
-      const id = el.getAttribute("data-for");
-      if (!id) return; // Guard against undefined id
+function _generateCopyEvent(id = "") {
+  if (!id) return; // Guard against undefined or null id
 
-      // Dispatch a custom event called copycode
-      const copyCodeEvent = new Event("copycode");
+  const el = document.querySelector(`.code pre > #${id} + div.copy`);
+  if (!el) return; // Guard against undefined or null el
 
-      copyCodeEvent.data = {
-        id: id,
-        message: el.getAttribute("data-message"),
-      };
+  // Make the copy button visible
+  el.classList.remove("disabled");
+  el.addEventListener("click", () => {
+    // Dispatch a custom event called copycode
+    const copyCodeEvent = new Event("copycode");
 
-      window.dispatchEvent(copyCodeEvent);
-    });
+    copyCodeEvent.data = {
+      id: id,
+      message: el.getAttribute("data-message"),
+    };
+
+    window.dispatchEvent(copyCodeEvent);
   });
 }
 
@@ -225,6 +229,5 @@ function addCopyEventListeners() {
 (async function onload() {
   addCodeBlocks();
   await addSnippetsToCodeBlocks();
-  generateCopyEvents();
   addCopyEventListeners();
 })();

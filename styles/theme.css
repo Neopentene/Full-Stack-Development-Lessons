@@ -38,24 +38,27 @@
   --lavender-blush: #f9e9ecff;
   --tickle-me-pink: #f88dadff;
   --davys-grey-opaque: rgb(81, 80, 82, 0.5);
+  scroll-behavior: smooth;
 }
 
 .viewport {
   display: flex;
-  margin: 1rem;
+  padding: 1rem 10%;
+  font-size: 16px;
 }
 
 .viewport > .renderer {
   border-radius: 1rem;
   background: white;
-  max-width: 90%;
   margin: auto;
+  overflow: auto;
 }
 
 .viewport > .renderer > .screen {
   outline: 2px dotted var(--davys-grey);
-  margin: 1rem;
+  margin: 1em;
   max-height: 420px;
+  max-width: 720px;
   overflow: auto;
 }
 
@@ -88,4 +91,51 @@
 
 .scrolling::-webkit-scrollbar-thumb {
   background-color: var(--davys-grey-opaque);
+}
+
+.to-top {
+  height: 2.5rem;
+  width: 2.5rem;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  border-radius: 50%;
+  background: var(--maize-crayola);
+  border: none;
+  box-sizing: 0 0 2px 1px var(--davys-grey-opaque);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 250ms ease-in-out;
+}
+
+.to-top::after {
+  display: block;
+  content: "";
+  height: 0.5rem;
+  width: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: solid var(--jet);
+  border-width: 0 0.2rem 0.2rem 0;
+  transform: translate(-50%, calc(-50% + ((1.414 * 0.5) * 0.25rem)))
+    rotate(-135deg);
+  -webkit-transform: translate(-50%, calc(-50% + ((1.414 * 0.5) * 0.25rem)))
+    rotate(-135deg);
+}
+
+.to-top:hover {
+  background-color: var(--st-patricks-blue);
+}
+
+.to-top:hover::after {
+  border-color: var(--lavender-blush);
+}
+
+.to-top.hide {
+  display: none;
+}
+
+.to-top.show {
+  display: block;
 }

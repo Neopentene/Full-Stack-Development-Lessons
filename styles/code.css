@@ -6,19 +6,19 @@
   overflow: hidden;
 }
 
-.code pre {
+.code > pre {
   position: relative;
   margin: auto;
   max-width: 80%;
 }
 
-.code pre > code {
+.code > pre > code {
   border-radius: 1rem;
   max-height: 30rem;
   overflow: overlay;
 }
 
-.code pre > div.copy {
+.code > pre > div.copy {
   position: absolute;
   height: 32px;
   width: 32px;
@@ -29,7 +29,7 @@
   border-radius: 4px;
 }
 
-.code pre > div.copy:hover {
+.code > pre > div.copy:hover {
   box-shadow: 0 0 2px 2px black;
 }
 
@@ -46,6 +46,6 @@
   font-family: FiraCode;
 }
 
-.code pre > div.copy.disabled {
+.code > pre > div.copy.disabled {
   display: none;
 }

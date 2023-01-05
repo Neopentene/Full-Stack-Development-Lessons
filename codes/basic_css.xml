@@ -42,6 +42,31 @@
 ]]>
 </css>
 
+<css for="css-relative-unit">
+<![CDATA[
+<style>
+    :root {/* default font size = 16px */}
+
+    /* :root selects the root element */
+    #box4 {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    #box5 {
+        width: 200px;
+        height: 200px;
+        font-size: 12px;
+    }
+
+    #box5 > div {
+        width: 4em;
+        height: 4em;
+    }
+</style>
+]]>
+</css>
+
 <rawhtml for="form-code">
 <![CDATA[
 <form action="/">
