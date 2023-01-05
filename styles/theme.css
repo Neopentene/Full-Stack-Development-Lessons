@@ -124,11 +124,13 @@
     rotate(-135deg);
 }
 
-.to-top:hover {
+.to-top:hover,
+.to-top:focus {
   background-color: var(--st-patricks-blue);
 }
 
-.to-top:hover::after {
+.to-top:hover::after,
+.to-top:focus::after {
   border-color: var(--lavender-blush);
 }
 

@@ -185,6 +185,8 @@
                                 <li><a href="#theory-css-unit-percentage">Percentage Unit</a></li>
                                 <li><a href="#theory-css-unit-relative">Relative Unit</a></li>
                                 <li><a href="#theory-css-property-background">Background</a></li>
+                                <li><a href="#theory-css-property-border-padding-margin">Border, Padding and Margin</a>
+                                </li>
                             </ol>
                         </li>
                     </ol>
@@ -221,6 +223,8 @@
                     <p class="theory accent m-auto max-w-700px t-center">
                         Units in CSS (%)
                     </p>
+
+                    <!-- Screen -->
                     <div class="viewport">
                         <div class="renderer">
                             <div class="screen">
@@ -264,6 +268,8 @@
                     <p class="theory accent m-auto max-w-700px t-center">
                         Units in CSS (rem & em)
                     </p>
+
+                    <!-- Screen -->
                     <div class="viewport">
                         <div class="renderer">
                             <div class="screen">
@@ -315,35 +321,89 @@
                     <p class="theory accent m-auto max-w-700px t-center">
                         Background
                     </p>
+
+                    <!-- Screen -->
                     <div class="viewport">
                         <div class="renderer">
                             <div class="screen">
                                 <div style="background: teal;">
-                                    <form action="/">
+                                    <form action="/" tabindex="-1">
                                         <label for="username">Username</label><br>
-                                        <input type="text" name="username" id="username"><br>
+                                        <input type="text" name="username" id="username" tabindex="-1"><br>
 
                                         <label for="password">Password</label><br>
-                                        <input type="password" name="password" id="password"><br>
+                                        <input type="password" name="password" id="password" tabindex="-1"><br>
 
-                                        <input type="radio" name="role" id="admin" value="admin">
+                                        <input type="radio" name="role" id="admin" value="admin" tabindex="-1">
                                         <label for="admin">Admin</label>
-                                        <input type="radio" name="role" id="client" value="client">
+                                        <input type="radio" name="role" id="client" value="client" tabindex="-1">
                                         <label for="client">Client</label>
 
                                         <br>
 
-                                        <input type="checkbox" name="agreement" id="agreement">
+                                        <input type="checkbox" name="agreement" id="agreement" tabindex="-1">
                                         <label for="agreement">I Agree</label><br>
 
-                                        <input type="submit">
+                                        <input type="submit" tabindex="-1">
                                     </form>
                                 </div>
+
+                                <p class="theory accent">
+                                    Observe the teal color background
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="code" data-id="css-background"></div>
                     <div class="code" data-id="form-code"></div>
+                </section>
+
+                <!--  -->
+                <section id="theory-css-property-border-padding-margin" class="border limit-w m-auto m-t-2rem">
+                    <p class="theory accent m-auto max-w-700px t-center">
+                        Border, Padding and Margin
+                    </p>
+
+                    <!-- Screen -->
+                    <div class="viewport">
+                        <div class="renderer">
+                            <div class="screen">
+                                <p class="theory info">Boxes of One Hundered Pixel: 100px</p>
+                                <p class="theory accent">
+                                    Border is a property that as the name suggests adds a border to
+                                    an element. Also the width of the border affects the flow of the document unless the
+                                    property
+                                    <span class="theory primary fit">box-sizing</span>
+                                    is set to
+                                    <span class="theory primary fit">border-box</span>
+                                    . The following
+                                    <span class="theory info fit">div elements</span>
+                                    show different types of borders available.
+                                </p>
+
+                                <p class="theory accent">Margin and Padding, these two properties go hand in hand.
+                                    Margin is spacing applied outside of your element and Padding is spacing applied
+                                    inside your element. Remember both of these properties affect the document flow.</p>
+                                <p class="theory primary">id = "box6" style = "solid" (no margin or padding)</p>
+                                <div
+                                    style="box-sizing: content-box; margin: 5px; width: 100px; height: 100px; border: 2px solid teal;">
+                                </div>
+                                <p class="theory primary">id = "box7" style = "dashed" margin = 10px</p>
+                                <div
+                                    style="box-sizing: content-box; margin: 15px; width: 100px; height: 100px; border: 2px dashed teal;">
+                                </div>
+                                <p class="theory primary">id = "box8" style = "double" padding = 20px</p>
+                                <div
+                                    style="box-sizing: content-box; margin: 5px; padding: 20px; width: 100px; height: 100px; border: 5px double teal;">
+                                </div>
+                                <p class="theory primary">id = "box9" style = "dotted" margin and padding = "20px"</p>
+                                <div
+                                    style="box-sizing: content-box; margin: 25px; padding: 20px; width: 100px; height: 100px; border: 2px dotted red;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code" data-id="css-border-margin-padding"></div>
                 </section>
             </section>
         </article>
