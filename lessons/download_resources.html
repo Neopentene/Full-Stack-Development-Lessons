@@ -164,7 +164,11 @@
             if (!/.*github.*/.test(document.location.host))
                 return;
             const ref = el.getAttribute("href").replace(/^\.*/, "");
-            el.setAttribute("href", document.location.href.replace(/lessons\/download_resources\.html$/, "blob/main" + ref))
+            el.setAttribute("href",
+                document.location.href
+                    .replace(/^.*github.io/, "https://github.com/Neopentene")
+                    .replace(/lessons\/download_resources\.html$/, "blob/main" + ref)
+            )
         })
     </script>
 </body>
