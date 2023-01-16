@@ -152,7 +152,7 @@
             </main>
         </section>
     </main>
-    <script>
+    <script id="removable-script">
         document.querySelectorAll(".links > li").forEach((el) => {
             el.addEventListener("click", (event) => {
                 if (event.target == el)
@@ -161,6 +161,7 @@
         })
 
         document.querySelectorAll('a[data-reference="github"]').forEach((el) => {
+            console.log("hey")
             if (!/.*github.*/.test(document.location.host))
                 return;
             const ref = el.getAttribute("href").replace(/^\.*/, "");
@@ -170,6 +171,9 @@
                     .replace(/lessons\/download_resources\.html$/, "blob/main" + ref)
             )
         })
+
+        const script = document.getElementById("removable-script");
+        script.parentElement.removeChild(script);
     </script>
 </body>
 
