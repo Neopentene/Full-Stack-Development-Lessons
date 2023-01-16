@@ -142,9 +142,10 @@
                 <div class="card">
                     <ul class="links">
                         <li><a href="../datasets/amazon/review_data_appliances/meta_Appliances.json?raw=true"
-                                download>Product
+                                data-reference="github" download>Product
                                 Metadata</a></li>
-                        <li><a href="../datasets/amazon/review_data_appliances/Appliances.json?raw=true" download>Actual
+                        <li><a href="../datasets/amazon/review_data_appliances/Appliances.json?raw=true"
+                                data-reference="github" download>Actual
                                 Reviews</a></li>
                     </ul>
                 </div>
@@ -157,6 +158,13 @@
                 if (event.target == el)
                     el.firstChild.click();
             })
+        })
+
+        document.querySelectorAll('a[data-reference="github"]').forEach((el) => {
+            if (!/.*github.*/.test(document.location.host))
+                return;
+            const ref = el.getAttribute("href").replace(/^\.*/, "");
+            el.setAttribute("href", document.location.href.replace(/lessons\/download_resources\.html$/, "blob/main" + ref))
         })
     </script>
 </body>
